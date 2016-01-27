@@ -1,0 +1,47 @@
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+//
+// Licensed under the MIT License. See LICENSE.txt in the project root for license information.
+
+#pragma once
+
+namespace ProjectUtil {
+namespace UI {
+namespace Composition {
+
+    [Windows::Foundation::Metadata::WebHostHidden]
+    public ref class CompositionImageFactory sealed
+    {
+    public:
+        static CompositionImageFactory^ CreateCompositionImageFactory(
+            Compositor^ compositor);
+
+        CompositionImage^ CreateImageFromUri(Uri^ uri);
+
+        CompositionImage^ CreateImageFromUri(
+            Uri^ uri,
+            CompositionImageOptions^ options);
+
+        CompositionImage^ CreateImageFromFile(StorageFile^ file);
+
+        CompositionImage^ CreateImageFromFile(
+            StorageFile^ file,
+            CompositionImageOptions^ options);
+
+        CompositionImage^ CreateImageFromPixels(
+            const Array<byte>^ pixels,
+            int pixelWidth,
+            int pixelHeight);
+
+    private:
+        CompositionImageFactory(
+            Compositor^ compositor,
+            CompositionGraphicsDevice^ graphicsDevice);
+
+    private:
+        CompositionGraphicsDevice^ _graphicsDevice;
+        Compositor^ _compositor;
+    };
+
+} // Composition
+} // UI
+} // ProjectUtil
