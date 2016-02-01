@@ -254,8 +254,9 @@ IBuffer^ CompositionImage::LoadImageFromUri(Uri^ uri)
         if ((uri->SchemeName == L"http") ||
             (uri->SchemeName == L"https"))
         {
+			// We don't really care about the file extension, always passing empty string
             fileLoadTask =
-                create_task(StorageFile::CreateStreamedFileFromUriAsync(uri->Extension, uri, nullptr));
+                create_task(StorageFile::CreateStreamedFileFromUriAsync(L"", uri, nullptr));
         }
         else if (uri->SchemeName == L"file")
         {
