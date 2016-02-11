@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ProjectUtil.UI.Composition</id>
+    <version>1.0.1</version>
+    <title>Project Util</title>
+    <authors>pgills</authors>
+    <owners>pgills</owners>
+    <!--<licenseUrl></licenseUrl>-->
+    <projectUrl>https://github.com/pgills/util</projectUrl>
+    <!--<iconUrl></iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This project is a code library that provides helpers and utilities focused on delivering engaging user experiences targeted to the Windows UI Platform.
+    The contents of this library is a mix of ad-hoc solutions that is intented to grow organcially over time.</description>
+    <releaseNotes>Initial version with bug fixes.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Windows Composition</tags>
+  </metadata>
+</package>

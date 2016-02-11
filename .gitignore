@@ -21,6 +21,7 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
+runtimes/
 
 # Visual Studio 2015 cache/options directory
 .vs/
@@ -210,3 +211,7 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+
+
+# Winmd files
+*.winmd
